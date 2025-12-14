@@ -13,8 +13,16 @@
 
 require __DIR__ . '/inc/all.inc.php';
 
+// One single query to fetch all needed resources using INNER JOINS
+$query = "select id, name from states";
+
+// Prepares the statement for execution and returns a statement object
+$stmt = $pdo->prepare($query);
+$stmt->execute();
+$states = $stmt->fetchAll(PDO::FETCH_ASSOC); // fetch all the rows instead of one single row
+// https://www.php.net/manual/en/pdostatement.fetchall.php 
 
 render('index.view', [
     'title' => 'Index ',
-    'current' => 'index',
+    'states' => $states
 ]);

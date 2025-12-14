@@ -9,7 +9,9 @@
     <meta name="generator" content="">
     <title><?= $title ?></title>
     <script src="public/js/tailwindcss.js"></script>
-    <link rel="stylesheet" href="public/css/main.css">
+    <!-- <link rel="stylesheet" href="public/css/main.css"> -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" /> -->
+
 </head>
 
 <body class="flex flex-col min-h-screen bg-white text-gray-600">
@@ -18,7 +20,14 @@
         <?= $content ?>
     </main>
 
-    <!-- <script src="public/js/main.js"></script> -->
+    <!-- I am doing jQuery because I think it will be nice to have some interactivity in the front
+        For the form validation instead of relying on the backend soleley.  
+    -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="public/js/main.js"></script>
+
 </body>
 
 </html>
